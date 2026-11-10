@@ -12,7 +12,7 @@ public class EnemyJump : MonoBehaviour
     public float attackDistance;
     public float attackTime;
     public bool isAttacking;
-    public PitMonster PM;
+    public PitMonsterUpdated PM;
     public bool isGrounded;
     //public EnemyDeath EM;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -20,7 +20,7 @@ public class EnemyJump : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         //animator = GetComponent<Animator>();
-        PM = GetComponent<PitMonster>();
+        PM = GetComponent<PitMonsterUpdated>();
         //EM = GetComponent<EnemyDeath>();
         player = GameObject.Find("Player");
     }
