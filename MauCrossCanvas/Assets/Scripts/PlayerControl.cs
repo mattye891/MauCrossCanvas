@@ -34,14 +34,13 @@ public class PlayerControl : MonoBehaviour
     public bool canDash = true;
     bool isDashing;
     [Header("Climb Settings")]
-    
-    
     public float wallJumpForceX = 11f;
     public float wallJumpForceY = 13f;
     public float wallJumpDuration = 0.18f;
     public Transform wallCheck;
     public float wallRad;
     public float wallTime;
+    public float wallSlideSpeed = 2f;
 
     [Header("Input Actions")]
     public InputActionReference playerMove;
@@ -63,14 +62,10 @@ public class PlayerControl : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         rb.gravityScale = normalGravity;
         startingScale = transform.localScale;
-
     }
-
-    // Update is called once per frame
 
     private void Update()
     {
-        //Debug.Log(rb.linearVelocity);
         if (isDashing)
         {
             return;
@@ -81,7 +76,7 @@ public class PlayerControl : MonoBehaviour
             canDoubleJump = true;
         }
         else canDoubleJump = false;
-       
+
         CheckGrounded();
         if (isGrounded)
         {
@@ -97,30 +92,35 @@ public class PlayerControl : MonoBehaviour
         }
         else isClimbing = false;
 
-        if(!isClimbing) Flip();
-        ApplyVariableGravity(); 
-        directionP = playerMove.action.ReadValue<Vector2>(); 
-        playerJump.action.performed += PlayerJump;
-        
+        if (!isClimbing) Flip();
+        ApplyVariableGravity();
+        directionP = playerMove.action.ReadValue<Vector2>();
     }
+
     private void FixedUpdate()
     {
-        rb.linearVelocity = new Vector2(directionP.x * moveSpeed, rb.linearVelocityY);
+        // don't steer for a moment after a wall jump
+        if (!isWallJumping)
+        {
+            rb.linearVelocity = new Vector2(directionP.x * moveSpeed, rb.linearVelocityY);
+        }
         if (isDashing)
         {
             rb.linearVelocity = new Vector2(dashPower * facingDirection, 0f);
         }
-        if (isClimbing && playerJump.action.IsPressed())
+
+        // wall slide: don't fall faster than wallSlideSpeed
+        if (isClimbing && rb.linearVelocityY < -wallSlideSpeed)
         {
-            rb.linearVelocity = new Vector2(wallJumpForceX * -facingDirection, rb.linearVelocityY * wallJumpForceY);
+            rb.linearVelocity = new Vector2(rb.linearVelocityX, -wallSlideSpeed);
         }
-        
     }
+
     void CheckGrounded()
     {
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRad, groundLayer);
-        
     }
+
     void Flip()
     {
         if (directionP.x > 0)
@@ -133,16 +133,18 @@ public class PlayerControl : MonoBehaviour
         }
         transform.localScale = new Vector2(startingScale.x * facingDirection, startingScale.y);
     }
+
     private void OnEnable()
     {
+        playerJump.action.performed += PlayerJump;
         playerDash.action.performed += PlayerDash;
     }
+
     private void OnDisable()
     {
         playerJump.action.performed -= PlayerJump;
         playerDash.action.performed -= PlayerDash;
     }
-
 
     void ApplyVariableGravity()
     {
@@ -154,22 +156,25 @@ public class PlayerControl : MonoBehaviour
         {
             rb.gravityScale = jumpGravity;
         }
-        else 
+        else
         {
             rb.gravityScale = normalGravity;
         }
     }
+
     public void PlayerJump(InputAction.CallbackContext context)
     {
-        if (isGrounded && context.ReadValueAsButton())
+        if (isClimbing && context.ReadValueAsButton())
         {
-            
+            StartCoroutine(WallJump());
+        }
+        else if (isGrounded && context.ReadValueAsButton())
+        {
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
             jumpCount++;
         }
-        else if (canDoubleJump  && context.ReadValueAsButton())
+        else if (canDoubleJump && context.ReadValueAsButton())
         {
-
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
             jumpCount++;
         }
@@ -180,11 +185,19 @@ public class PlayerControl : MonoBehaviour
                 rb.linearVelocity = new Vector2(rb.linearVelocityX, rb.linearVelocityY * jumpCutMultiplier);
             }
         }
-        
     }
+
+    IEnumerator WallJump()
+    {
+        isWallJumping = true;
+        rb.linearVelocity = new Vector2(wallJumpForceX * -facingDirection, wallJumpForceY);
+        yield return new WaitForSeconds(wallJumpDuration);
+        isWallJumping = false;
+    }
+
     private void PlayerDash(InputAction.CallbackContext context)
-    { 
-        if(context.performed && canDash)
+    {
+        if (context.performed && canDash)
         {
             StartCoroutine(Dash());
         }
@@ -200,11 +213,8 @@ public class PlayerControl : MonoBehaviour
         rb.gravityScale = 0f;
         tr.emitting = true;
 
-        
-        //rb.AddForce(transform.right * dashPower);
         yield return new WaitForSeconds(dashTime);
-        //rb.linearVelocity = new Vector2(0f, rb.linearVelocityY);
-        
+
         rb.gravityScale = currentGravity;
         playerCollider.enabled = true;
         isDashing = false;
@@ -218,8 +228,4 @@ public class PlayerControl : MonoBehaviour
         Gizmos.color = Color.aquamarine;
         Gizmos.DrawWireSphere(wallCheck.position, wallRad);
     }
-
-   
-
 }
-
