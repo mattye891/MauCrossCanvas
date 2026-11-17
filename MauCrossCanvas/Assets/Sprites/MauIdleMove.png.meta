@@ -1,0 +1,535 @@
+fileFormatVersion: 2
+guid: 81ead003786f4a145893e159b20abf6e
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 6019217062358285235
+    second: MauIdleMove_0
+  - first:
+      213: 6818594763607008120
+    second: MauIdleMove_1
+  - first:
+      213: -7518022890547707738
+    second: MauIdleMove_2
+  - first:
+      213: -6891240362644170315
+    second: MauIdleMove_3
+  - first:
+      213: 7883028669965495346
+    second: MauIdleMove_4
+  - first:
+      213: 91827550070958543
+    second: MauIdleMove_5
+  - first:
+      213: 2101871483267789554
+    second: MauIdleMove_6
+  - first:
+      213: -3219331153961872667
+    second: MauIdleMove_7
+  - first:
+      213: 4755209903559421255
+    second: MauIdleMove_8
+  - first:
+      213: -6913707448586374360
+    second: MauIdleMove_9
+  - first:
+      213: -3633314516264939318
+    second: MauIdleMove_10
+  - first:
+      213: 5337376148974749295
+    second: MauIdleMove_11
+  - first:
+      213: 951224762405270773
+    second: MauIdleMove_12
+  - first:
+      213: -33132076697365605
+    second: MauIdleMove_13
+  - first:
+      213: -80809272246992616
+    second: MauIdleMove_14
+  - first:
+      213: 2892575011195273563
+    second: MauIdleMove_15
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 2048
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: MauIdleMove_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2181
+        width: 1079
+        height: 727
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3bbf5dbe60e888350800000000000000
+      internalID: 6019217062358285235
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MauIdleMove_1
+      rect:
+        serializedVersion: 2
+        x: 1079
+        y: 2181
+        width: 1079
+        height: 727
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8736220afc380ae50800000000000000
+      internalID: 6818594763607008120
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MauIdleMove_2
+      rect:
+        serializedVersion: 2
+        x: 2158
+        y: 2181
+        width: 1079
+        height: 727
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6a006a3630e9aa790800000000000000
+      internalID: -7518022890547707738
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MauIdleMove_3
+      rect:
+        serializedVersion: 2
+        x: 3237
+        y: 2181
+        width: 1079
+        height: 727
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5b992cac6656d50a0800000000000000
+      internalID: -6891240362644170315
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MauIdleMove_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1454
+        width: 1079
+        height: 727
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 23c638b2fc4266d60800000000000000
+      internalID: 7883028669965495346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MauIdleMove_5
+      rect:
+        serializedVersion: 2
+        x: 1079
+        y: 1454
+        width: 1079
+        height: 727
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fc9e2969bac364100800000000000000
+      internalID: 91827550070958543
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MauIdleMove_6
+      rect:
+        serializedVersion: 2
+        x: 2158
+        y: 1454
+        width: 1079
+        height: 727
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2f233b35af85b2d10800000000000000
+      internalID: 2101871483267789554
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MauIdleMove_7
+      rect:
+        serializedVersion: 2
+        x: 3237
+        y: 1454
+        width: 1079
+        height: 727
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5e211c94f53a253d0800000000000000
+      internalID: -3219331153961872667
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MauIdleMove_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 727
+        width: 1079
+        height: 727
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 74d241e8636edf140800000000000000
+      internalID: 4755209903559421255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MauIdleMove_9
+      rect:
+        serializedVersion: 2
+        x: 1079
+        y: 727
+        width: 1079
+        height: 727
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8237906b4b39d00a0800000000000000
+      internalID: -6913707448586374360
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MauIdleMove_10
+      rect:
+        serializedVersion: 2
+        x: 2158
+        y: 727
+        width: 1079
+        height: 727
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ac012c492bfd39dc0800000000000000
+      internalID: -3633314516264939318
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MauIdleMove_11
+      rect:
+        serializedVersion: 2
+        x: 3237
+        y: 727
+        width: 1079
+        height: 727
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f664840345b221a40800000000000000
+      internalID: 5337376148974749295
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MauIdleMove_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 1079
+        height: 727
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5f4b8b0b1ed633d00800000000000000
+      internalID: 951224762405270773
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MauIdleMove_13
+      rect:
+        serializedVersion: 2
+        x: 1079
+        y: 0
+        width: 1079
+        height: 727
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b9358c14d8a4a8ff0800000000000000
+      internalID: -33132076697365605
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MauIdleMove_14
+      rect:
+        serializedVersion: 2
+        x: 2158
+        y: 0
+        width: 1079
+        height: 727
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 81109212568e0eef0800000000000000
+      internalID: -80809272246992616
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MauIdleMove_15
+      rect:
+        serializedVersion: 2
+        x: 3237
+        y: 0
+        width: 1079
+        height: 727
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b51477ca5ad742820800000000000000
+      internalID: 2892575011195273563
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: e95c9786dea68d1409cb4196afa1e0e0
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":4.0,"y":4.0},"gridSpriteSize":{"x":1079.0,"y":727.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      MauIdleMove_0: 6019217062358285235
+      MauIdleMove_1: 6818594763607008120
+      MauIdleMove_10: -3633314516264939318
+      MauIdleMove_11: 5337376148974749295
+      MauIdleMove_12: 951224762405270773
+      MauIdleMove_13: -33132076697365605
+      MauIdleMove_14: -80809272246992616
+      MauIdleMove_15: 2892575011195273563
+      MauIdleMove_2: -7518022890547707738
+      MauIdleMove_3: -6891240362644170315
+      MauIdleMove_4: 7883028669965495346
+      MauIdleMove_5: 91827550070958543
+      MauIdleMove_6: 2101871483267789554
+      MauIdleMove_7: -3219331153961872667
+      MauIdleMove_8: 4755209903559421255
+      MauIdleMove_9: -6913707448586374360
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

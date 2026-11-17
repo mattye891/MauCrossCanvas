@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class BarkBarkWoofWoof : MonoBehaviour
@@ -17,6 +18,8 @@ public class BarkBarkWoofWoof : MonoBehaviour
     private bool isCharging = false;
     private float chargeEndTime = 0f;
     private float nextChargeTime = 0f;
+    bool playerInFront;
+    public float whatISay;
 
     void Start()
     {
@@ -28,6 +31,7 @@ public class BarkBarkWoofWoof : MonoBehaviour
 
     void Update()
     {
+        playerInFront = (player.position.x - transform.position.x) * direction > 0;
         // Set facing direction
         if (goLeft)
         {
@@ -47,6 +51,12 @@ public class BarkBarkWoofWoof : MonoBehaviour
         {
             StopCharge();
         }
+        //Check if the wolf is still charging but the player has jumped over, this check works
+        else if (isCharging && !playerInFront)
+        {
+            StartCoroutine(WoofWait());
+
+        }
 
         float speed = isCharging ? chargeSpeed : moveSpeed;
         transform.Translate(new Vector2(direction, 0) * speed * Time.deltaTime);
@@ -57,25 +67,29 @@ public class BarkBarkWoofWoof : MonoBehaviour
         if (isCharging || player == null || Time.time < nextChargeTime) return;
 
         float distance = Vector2.Distance(transform.position, player.position);
-        bool playerInFront = (player.position.x - transform.position.x) * direction > 0;
+        
 
         if (distance <= chargeRange && playerInFront)
         {
             isCharging = true;
             chargeEndTime = Time.time + chargeDuration;
+            
         }
     }
 
     void StopCharge()
     {
+        
         isCharging = false;
         nextChargeTime = Time.time + chargeCooldown;
+        
     }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("EnemyCollider") || other.CompareTag("Enemy") || other.CompareTag("Player"))
         {
+            Debug.Log("Trigger");
             goLeft = !goLeft;
             if (isCharging) StopCharge();
         }
@@ -85,8 +99,18 @@ public class BarkBarkWoofWoof : MonoBehaviour
     {
         if (other.gameObject.CompareTag("EnemyCollider") || other.gameObject.CompareTag("Enemy"))
         {
+            Debug.Log("Collision");
             goLeft = !goLeft;
             if (isCharging) StopCharge();
         }
+    }
+    //have the wolf keep charging for a set amount of time before turning around, currently doesn't work properly
+    IEnumerator WoofWait()
+    {
+        Debug.Log("Coroutune");
+        yield return new WaitForSeconds(whatISay);
+        goLeft = !goLeft;
+        StopCharge();
+        
     }
 }

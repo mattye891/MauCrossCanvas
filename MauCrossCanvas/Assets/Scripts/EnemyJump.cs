@@ -22,7 +22,7 @@ public class EnemyJump : MonoBehaviour
         //animator = GetComponent<Animator>();
         PM = GetComponent<PitMonsterUpdated>();
         //EM = GetComponent<EnemyDeath>();
-        player = GameObject.Find("Player");
+        player = GameObject.Find("Mau");
     }
 
     // Update is called once per frame
